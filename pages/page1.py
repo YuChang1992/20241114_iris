@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-st.title("IRIS品種預測")
+st.title("鳶尾花品種預測")
 
 # 載入模型
 knn = joblib.load("model/KNN.joblib")
@@ -26,17 +26,17 @@ se1 = st.slider("### 花萼長度(cm):",float(df["sepal.length"].min() - 0.5) , 
                 float(df["sepal.length"].max() + 0.5),  # 最大值當滑桿的終點
                 float(df["sepal.length"].mean()))  # 平均值當滑桿的中間點
 
-se2 = st.slider("### 花萼寬度(cm):",float(df["sepal.width"].min() - 0.5) ,  # 抓sepal.width欄位最小值當滑桿的起點
-                float(df["sepal.width"].max() + 0.5),  # 最大值當滑桿的終點
-                float(df["sepal.width"].mean()))  # 平均值當滑桿的中間點
+se2 = st.slider("### 花萼寬度(cm):",float(df["sepal.width"].min() - 0.5) ,
+                float(df["sepal.width"].max() + 0.5),
+                float(df["sepal.width"].mean()))
 
-se3 = st.slider("### 花瓣長度(cm):",float(df["petal.length"].min() - 0.5) ,  # 抓petal.length欄位最小值當滑桿的起點
-                float(df["petal.length"].max() + 0.5),  # 最大值當滑桿的終點
-                float(df["petal.length"].mean()))  # 平均值當滑桿的中間點
+se3 = st.slider("### 花瓣長度(cm):",float(df["petal.length"].min() - 0.5) ,
+                float(df["petal.length"].max() + 0.5),
+                float(df["petal.length"].mean()))
 
-se4 = st.slider("### 花瓣寬度(cm):",float(df["petal.width"].min() - 0.5) ,  # 抓petal.width欄位最小值當滑桿的起點
-                float(df["petal.width"].max() + 0.5),  # 最大值當滑桿的終點
-                float(df["petal.width"].mean()))  # 平均值當滑桿的中間點
+se4 = st.slider("### 花瓣寬度(cm):",float(df["petal.width"].min() - 0.5) ,
+                float(df["petal.width"].max() + 0.5),
+                float(df["petal.width"].mean()))
 
 st.image("iris.png")
 
