@@ -1,2 +1,2 @@
 # 20241114_iris
-iris train + predict
+鳶尾花 訓練+預測
