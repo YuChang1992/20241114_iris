@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
-st.title("IRIS樣本分佈圖")
+st.title("鳶尾花樣本分佈圖")
 
 df = pd.read_csv("iris.csv")
 mapping = {"Setosa":0,"Versicolor":1,"Virginica":2}
@@ -11,7 +11,6 @@ color = ['red', 'green', 'blue']
 
 tab1, tab2 = st.tabs(["依花萼長寬", '依花瓣長寬'])
 with tab1:
-    # st.write("111")
     fig,ax = plt.subplots()
     for i,j in mapping.items():
         subset = df[df["variety"]==i]
